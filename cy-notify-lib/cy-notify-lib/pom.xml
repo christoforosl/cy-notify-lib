@@ -24,7 +24,7 @@
                 <repository>
                 <id>github-releases</id>
                 <name>Github Releases</name>
-                <url>https://maven.pkg.github.com//netu-si/cy-notify.git</url>
+                <url>https://maven.pkg.github.com/netu-si/cy-notify</url>
                 </repository>
             </distributionManagement>
         </profile>
