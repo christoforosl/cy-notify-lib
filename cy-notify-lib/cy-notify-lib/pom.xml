@@ -17,6 +17,18 @@
     </properties>
 
     <profiles>
+
+        <profile>
+            <id>github</id>
+            <distributionManagement>
+                <repository>
+                <id>github-releases</id>
+                <name>Github Releases</name>
+                <url>https://maven.pkg.github.com//netu-si/cy-notify.git</url>
+                </repository>
+            </distributionManagement>
+        </profile>
+
         <profile>
             <id>default</id>
              <properties>
