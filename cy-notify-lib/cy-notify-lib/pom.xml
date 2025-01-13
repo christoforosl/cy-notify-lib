@@ -133,7 +133,7 @@
     </build>
      <scm>
         <url>${giturl}</url>
-        <developerConnection>>${giturl}</developerConnection>
+        <developerConnection>${giturl}</developerConnection>
         <connection>${giturl}</connection>
         <tag>HEAD</tag>
     </scm>
