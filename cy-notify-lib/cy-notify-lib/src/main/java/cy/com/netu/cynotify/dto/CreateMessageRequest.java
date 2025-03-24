@@ -35,6 +35,9 @@ public class CreateMessageRequest {
     private Locale locale;
 
     @Getter @Setter
+    private Map<String, Object> templateParameters;
+
+    @Getter @Setter
     private Map<String, Object> templateData;
 
     @Getter @Setter
@@ -47,6 +50,7 @@ public class CreateMessageRequest {
             @JsonProperty("destination") String destination,
             @JsonProperty("templateId") Long templateId,
             @JsonProperty("locale") Locale locale,
+            @JsonProperty("templateParameters") Map<String, Object> templateParameters,
             @JsonProperty("templateData") Map<String, Object> templateData,
             @JsonProperty("messageChannel") EnumNotificationChannel messageChannel) {
 
@@ -57,7 +61,7 @@ public class CreateMessageRequest {
         this.templateData = templateData;
         this.messageChannel = messageChannel;
         this.locale = locale;
-
+        this.templateParameters = templateParameters;
     }
 
     /**
@@ -68,16 +72,19 @@ public class CreateMessageRequest {
      * @param templateId The template id, from table notification_template
      * @param messageChannel The channel to send the message, Email or SMS
      */
-    public CreateMessageRequest(String relatedRecordType,
+    public CreateMessageRequest(
+            String relatedRecordType,
             Long relatedRecordId,
             String destination,
             Long templateId,
+            Map<String, Object> templateParameters,
             EnumNotificationChannel messageChannel) {
 
         this.relatedRecordId = relatedRecordId;
         this.destination = destination;
         this.templateId = templateId;
         this.relatedRecordType = relatedRecordType;
+        this.templateParameters = templateParameters;
         this.templateData = new HashMap<>();
         this.messageChannel = messageChannel;
         this.locale = new Locale("el", "GR"); // default to greek!
