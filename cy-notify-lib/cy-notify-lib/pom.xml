@@ -22,7 +22,7 @@
             <id>github</id>
 
             <properties>
-                <giturl>scm:git:https://oauth:${oauth2.github.token}j@github.com/netu-si/cy-notify.git</giturl>
+                <giturl>scm:git:https://oauth:${oauth2.github.token}@github.com/netu-si/cy-notify.git</giturl>
             </properties>
 
             <distributionManagement>
