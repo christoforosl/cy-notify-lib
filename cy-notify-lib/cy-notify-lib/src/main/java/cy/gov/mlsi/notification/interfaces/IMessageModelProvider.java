@@ -7,6 +7,6 @@ import java.util.Map;
  */
 public interface IMessageModelProvider {
 
-    Map<String, Object> getModel(Object sourceObject) throws Exception;
+    Map<String, Object> getModel(Object sourceObject, Map<String, Object> templateParameters) throws Exception;
 
 }

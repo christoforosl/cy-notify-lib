@@ -7,7 +7,7 @@
     <groupId>cy.com.netu.cynotify</groupId>
     <artifactId>cy-notify-lib</artifactId>
     <name>cy-notify-lib</name>
-    <version>1.1.5-SNAPSHOT</version>
+    <version>1.1.6-SNAPSHOT</version>
 
     <properties>
         <java.version>17</java.version>
@@ -29,7 +29,7 @@
                 <repository>
                 <id>github</id>
                 <name>Github Releases</name>
-                <url>https://maven.pkg.github.com/netu-si/cy-notify</url>
+                <url>https://oauth:${oauth2.github.token}@maven.pkg.github.com/netu-si/cy-notify</url>
                 </repository>
             </distributionManagement>
         </profile>
