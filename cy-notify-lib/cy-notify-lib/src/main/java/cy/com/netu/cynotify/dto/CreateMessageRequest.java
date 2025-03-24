@@ -43,6 +43,7 @@ public class CreateMessageRequest {
     @Getter @Setter
     private EnumNotificationChannel messageChannel;
 
+    @SuppressWarnings("checkstyle:ParameterNumber")
     @JsonCreator
     public CreateMessageRequest(
             @JsonProperty("relatedRecordType") String relatedRecordType,
