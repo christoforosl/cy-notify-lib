@@ -43,6 +43,9 @@ public class CreateMessageRequest {
     @Getter @Setter
     private EnumNotificationChannel messageChannel;
 
+    @Getter @Setter
+    private String presentedField;
+
     @SuppressWarnings("checkstyle:ParameterNumber")
     @JsonCreator
     public CreateMessageRequest(
@@ -53,7 +56,8 @@ public class CreateMessageRequest {
             @JsonProperty("locale") Locale locale,
             @JsonProperty("templateParameters") Map<String, Object> templateParameters,
             @JsonProperty("templateData") Map<String, Object> templateData,
-            @JsonProperty("messageChannel") EnumNotificationChannel messageChannel) {
+            @JsonProperty("messageChannel") EnumNotificationChannel messageChannel,
+            @JsonProperty("presentedField") String presentedField) {
 
         this.relatedRecordId = relatedRecordId;
         this.destination = destination;
@@ -63,6 +67,7 @@ public class CreateMessageRequest {
         this.messageChannel = messageChannel;
         this.locale = locale;
         this.templateParameters = templateParameters;
+        this.presentedField = presentedField;
     }
 
     /**
@@ -79,7 +84,8 @@ public class CreateMessageRequest {
             String destination,
             Long templateId,
             Map<String, Object> templateParameters,
-            EnumNotificationChannel messageChannel) {
+            EnumNotificationChannel messageChannel,
+            String presentedField) {
 
         this.relatedRecordId = relatedRecordId;
         this.destination = destination;
@@ -89,7 +95,7 @@ public class CreateMessageRequest {
         this.templateData = new HashMap<>();
         this.messageChannel = messageChannel;
         this.locale = new Locale("el", "GR"); // default to greek!
-
+        this.presentedField = presentedField;
     }
 
     public CreateMessageRequest addTemplateData(String key, Object value) {
